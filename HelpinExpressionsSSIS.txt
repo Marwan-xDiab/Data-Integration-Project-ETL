@@ -1,0 +1,7 @@
+REPLACE((DT_WSTR, 10)(DT_DBDATE)GETDATE(),"-","") - CurrentDateComponent
+
+Right(REPLACE( RIGHT( @[User::FilePath] , FINDSTRING(REVERSE( @[User::FilePath] ) , "\\", 1) - 1), ".csv", "" ),8)
+--FileDateComponent
+
+
+REPLACE( RIGHT( @[User::FilePath] , FINDSTRING(REVERSE( @[User::FilePath] ) , "\\", 1) - 1), ".csv", "" ) --FileName
